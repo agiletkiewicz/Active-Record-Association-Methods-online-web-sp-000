@@ -13,6 +13,7 @@ class Song < ActiveRecord::Base
       new_artist = Artist.create(name: "Drake")
       self.artist = new_artist
     end
+    
   end
   
   
