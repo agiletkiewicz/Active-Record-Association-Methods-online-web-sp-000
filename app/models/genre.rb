@@ -21,3 +21,14 @@ class Genre < ActiveRecord::Base
     # return an array of strings containing every musician's name
   end
 end
+
+def artists 
+      artist_array =[]
+      self.songs.each do |song|
+      if artist_array.include?(song.artist)
+      else 
+        artist_array << song.artist
+      end
+      artist_array
+    end
+end
