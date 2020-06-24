@@ -17,5 +17,6 @@ class Artist < ActiveRecord::Base
       else 
         genre_array << song.genre
     end
+    genre_array.count
   end
 end
