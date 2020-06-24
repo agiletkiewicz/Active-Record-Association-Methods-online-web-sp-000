@@ -11,6 +11,11 @@ class Artist < ActiveRecord::Base
   end
 
   def genre_count
-    self.songs.genres.count
+    genre_array =[]
+    self.songs.each do |song|
+      if genre_array.include?(song.genre)
+      else 
+        genre_array << song.genre
+    end
   end
 end
