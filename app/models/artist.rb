@@ -16,7 +16,11 @@ class Artist < ActiveRecord::Base
       if genre_array.include?(song.genre)
       else 
         genre_array << song.genre
+      end
     end
     genre_array.count
   end
+  
+  
+  
 end
