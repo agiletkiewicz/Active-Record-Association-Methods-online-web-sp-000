@@ -20,7 +20,7 @@ def all_artist_names
       self.songs.each do |song|
       if artist_array.include?(song.artist)
       else 
-        artist_array << song.artist
+        artist_array << song.artist.name
       end
     end
       artist_array
